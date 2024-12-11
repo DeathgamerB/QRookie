@@ -34,8 +34,7 @@ VrpPublic::VrpPublic(QObject *parent)
 
 QCoro::Task<bool> VrpPublic::update()
 {
-    static const QVector<QString> urls = {"https://raw.githubusercontent.com/vrpyou/quest/main/vrp-public.json",
-                                          "https://vrpirates.wiki/downloads/vrp-public.json"};
+    static const QVector<QString> urls = {"https://vrpirates.wiki/downloads/vrp-public.json"};
 
     for (auto url : urls) {
         qDebug() << "Downloading vrp-public.json from " << url;
